@@ -19,8 +19,8 @@ const Form = () => {
     }
 
     const deletarTarefa = (id_Tarefa) => {
-        tarefas.find((elemento) = id_Tarefa)
-        tarefas.splice(e, )
+        console.log(id_Tarefa)
+        tarefas.pop()
         setTarefas([...tarefas])
     }
     
