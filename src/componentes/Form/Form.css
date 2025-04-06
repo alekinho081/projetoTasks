@@ -1,0 +1,16 @@
+.form {
+    border: 5px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    background-color: gray;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.form-caixa {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}

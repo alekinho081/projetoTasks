@@ -1,0 +1,17 @@
+.input-text {
+    color: black;
+    padding-bottom: 4px;
+    
+}
+
+.input-text input {
+    border: solid 1px;
+    border-radius: 5px;
+    height: 20px;
+    width: 200px;
+    box-shadow: 3px 3px gray;
+}
+
+.input-text label {
+    font-size: 18px;
+}

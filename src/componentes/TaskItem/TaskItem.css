@@ -1,0 +1,27 @@
+.task-item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 8px 8px 8px 8px;
+    align-items: center; 
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 20px;
+    margin-bottom: 8px;
+}
+
+.task-item p {
+    margin: 0;
+    padding-right: 30px;
+    word-break: break-word;
+}
+
+
+.task-item img {
+    right: 8px;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+    cursor: pointer;
+}
