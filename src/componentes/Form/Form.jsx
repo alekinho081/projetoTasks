@@ -8,6 +8,7 @@ import { useState } from "react";
 const Form = () => {
     let [tarefa, setTarefa] = useState('')
     let [tarefas, setTarefas] = useState([])
+    let [tarefConc, setConclu] = useState([])
 
     const aoEnviar = (event) =>{
         event.preventDefault()
@@ -19,10 +20,27 @@ const Form = () => {
     }
 
     const deletarTarefa = (id_Tarefa) => {
-        console.log(id_Tarefa)
-        tarefas.pop()
-        setTarefas([...tarefas])
+        const delTarefa = tarefas.filter((_, index) => index !== id_Tarefa);
+        setTarefas(delTarefa);
+    };
+
+    const aoMarcar = (id_Tarefa) => {
+        
+        if(tarefConc[id_Tarefa] === id_Tarefa){
+            const delTarefa = tarefConc.filter(tarefa => tarefa !== id_Tarefa);
+            setConclu(delTarefa);
+        }else{
+            setConclu([...tarefConc, id_Tarefa])
+        }
+        console.log(tarefConc)
     }
+
+    const alterarArray = (index) => {
+        let novaTarefa = prompt('digite sua nova tarefa')
+        tarefas.splice(index, 1, novaTarefa)
+        setTarefas([...tarefConc, novaTarefa]);
+    }
+    
     
 
     return (
@@ -33,7 +51,7 @@ const Form = () => {
                     <ButtonNew type="submit"/>
                 </form>
             </div>
-            <TaskList tarefas={tarefas} deletar={deletarTarefa} />
+            <TaskList tarefas={tarefas} deletar={deletarTarefa} mudou={aoMarcar} concluidas={tarefConc} alterar={alterarArray}/>
         </div>
 
     )
