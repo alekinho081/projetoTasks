@@ -35,10 +35,10 @@ const Form = () => {
         console.log(tarefConc)
     }
 
-    const alterarArray = (index) => {
+    const alterarArray = (index ) => {
         let novaTarefa = prompt('digite sua nova tarefa')
         tarefas.splice(index, 1, novaTarefa)
-        setTarefas([...tarefConc, novaTarefa]);
+        setTarefas([...tarefas]);
     }
     
     
